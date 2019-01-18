@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Features
+namespace Features.Linq
 {
     static class MyLinq
     {
