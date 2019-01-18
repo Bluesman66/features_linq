@@ -7,7 +7,7 @@ namespace Features
     {
         static void Main(string[] args)
         {
-            var developers = new Employee[]
+            IEnumerable<Employee> developers = new Employee[]
             {
                 new Employee { Id = 1, Name = "Scott" },
                 new Employee { Id = 2, Name = "Chris" }
@@ -28,12 +28,19 @@ namespace Features
                 Console.WriteLine(person.Name);
             }
 
+            Console.WriteLine("*****");
+
             IEnumerator<Employee> enumerator = developers.GetEnumerator();
             while (enumerator.MoveNext())
             {
                 Console.WriteLine(enumerator.Current.Name);
             }
 
+            IEnumerator<Employee> enumerator1 = sales.GetEnumerator();
+            while (enumerator1.MoveNext())
+            {
+                Console.WriteLine(enumerator1.Current.Name);
+            }
 
             Console.ReadKey();
         }
