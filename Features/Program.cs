@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Features.Linq;
+using System;
 using System.Collections.Generic;
 
 namespace Features
@@ -41,6 +42,9 @@ namespace Features
             {
                 Console.WriteLine(enumerator1.Current.Name);
             }
+
+            Console.WriteLine($"developers.Count() = {developers.Count()}");
+            Console.WriteLine($"sales.Count() = {sales.Count()}");
 
             Console.ReadKey();
         }
